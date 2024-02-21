@@ -21,7 +21,9 @@ jobs:
               sudo apt-get install maven
               mvn --version
               git config --global user.email "sukruth700@gmail.com"
-              git config --global user.name "Sukruth"
+              git config --global user.name "Sukruth" 
+              git submodule sync --recursive
+              git submodule update --init --recursive
               git clone https://${{secrets.TOKEN}}@github.com/Sonal0409/DevOpsClassCodes.git
               cd DevOpsClassCodes
               mvn install
